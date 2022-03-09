@@ -10,20 +10,20 @@ namespace Miki1
         private void button1_Click(object sender, EventArgs e)
         {
 
-            int vara = int.Parse(VerA.Text);
-            int varb = int.Parse(VerA.Text);
-            int varc = int.Parse(VerA.Text);
-            double delta = Math.Pow(varb, 2) - 4 * vara * varc;
+            int vara = int.Parse(VarA.Text);
+            int varb = int.Parse(VarB.Text);
+            int varc = int.Parse(VarC.Text);
+            double delta = (Math.Pow(varb, 2)) - (4 * vara * varc);
             Delta.Text = "Delta:" + Convert.ToString(delta);
             if (delta < 0)
             {
-                x1.Text = "brak x"
+                x1.Text = "brak x";
                     x2.Text = "brak x";
                 wynik_D.Text = "Delta jest równa 0";
             }
             if (delta == 0)
             {
-                double xfirst = -varb / vara * 2;
+                double xfirst = ((-1)*varb) / (vara * 2);
                 xfirst = Math.Round(xfirst, 1);
                 x1.Text = "x: " + Convert.ToString(xfirst);
                 x2.Text = "";
@@ -47,9 +47,5 @@ namespace Miki1
 
         }
 
-        private void Calc(object sender, EventArgs e)
-        {
-
-        }
     }
 }
